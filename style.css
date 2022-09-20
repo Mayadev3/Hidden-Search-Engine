@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box; /*so padding and border doesnt effect the width and height of the element*/
+}
+
+body {
+  font-family: "Roboto", sand-serif;
+  margin: 0;
+  min-height: 100vh; /* we need to assign a height so the items knows where to center*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /*so there are no scroll bars visible*/
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+.search-container {
+  position: relative;
+}
+.search {
+  background-color: white;
+  font-size: 24px;
+  border: none;
+  padding: 13px;
+  width: 50px;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+input {
+  color: #faca15;
+}
+.search-container.active .search {
+  width: 400px;
+}
+.btn {
+  border: none;
+  background-color: white;
+  font-size: 24px;
+  color: grey;
+  padding: 10px;
+  width: 50px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.search-container.active .btn {
+  transform: translateX(350px);
+}
+.search:focus,
+.btn:focus {
+  outline: none;
+}
